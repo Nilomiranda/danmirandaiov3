@@ -14,7 +14,8 @@
     "babel-plugin-react-compiler": "0.0.0-experimental-487cb0e-20240529",
     "next": "15.0.0-rc.0",
     "react": "19.0.0-rc-38e3b23483-20240529",
-    "react-dom": "19.0.0-rc-38e3b23483-20240529"
+    "react-dom": "19.0.0-rc-38e3b23483-20240529",
+    "react-markdown": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",

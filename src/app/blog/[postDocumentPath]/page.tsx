@@ -2,16 +2,14 @@ import {loadPost} from "@/app/blog/[postDocumentPath]/actions";
 import Markdown from "react-markdown";
 
 export default async function BlogPostPage({ params: { postDocumentPath } }: { params: { postDocumentPath: string } }) {
-  console.log({postDocumentPath})
-
   const postFileContent = await loadPost(postDocumentPath);
-  console.log({postFileContent})
 
   return (
-    <main>
+    <article className="flex flex-col items-center">
+      <h1>{decodeURI(postDocumentPath)}</h1>
       <Markdown>
         {postFileContent}
       </Markdown>
-    </main>
+    </article>
   )
 }

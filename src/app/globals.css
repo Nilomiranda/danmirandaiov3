@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+html, body {
+    background: var(--color-amber-50);
+    padding: var(--spacing-3) var(--spacing-1);
+}
+
+h1 {
+    font-size: var(--font-size-4xl);
+}
+
+h2 {
+    font-size: var(--font-size-2xl);
+}
+
+a {
+    @apply text-amber-700 underline decoration-1;
+}

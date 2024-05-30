@@ -6,7 +6,7 @@ export default async function Home() {
   const filteredPosts = posts.filter(post => post.type !== 'dir');
 
   return (
-    <main>
+    <main className="h-screen w-full flex flex-col items-center">
       <h1>Danilo's tech blog</h1>
 
       <section>

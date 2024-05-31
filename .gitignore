@@ -37,7 +37,6 @@ next-env.d.ts
 /.idea/.gitignore
 /.idea/danmirandaio.iml
 /.idea/modules.xml
-/pnpm-lock.yaml
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/vcs.xml
 /Github/bruno.json

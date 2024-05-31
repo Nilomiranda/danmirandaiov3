@@ -8,7 +8,7 @@ export default async function Home() {
 
   return (
     <main className="h-screen w-full flex flex-col items-center">
-      <h1 className="mb-10">Danilo's tech blog</h1>
+      <h1 className="mb-10">Danilo&apos;s tech blog</h1>
 
       { hasNoPosts && <strong>Nothing to see here</strong>}
 

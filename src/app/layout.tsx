@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <nav className="p-2 w-full flex items-center justify-end">
+      <body className={`${inter.className}`}>
+        <nav className="px-4 py-4 w-full flex items-center justify-end">
           <ul>
             <li><Link href="/">/ home</Link></li>
           </ul>

@@ -1,13 +1,32 @@
 import {loadPost} from "@/app/blog/[postDocumentPath]/actions";
 import Markdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default async function BlogPostPage({ params: { postDocumentPath } }: { params: { postDocumentPath: string } }) {
   const postFileContent = await loadPost(postDocumentPath);
 
   return (
-    <article className="flex flex-col items-center">
+    <article className="flex flex-col w-full max-w-2xl mx-auto">
       <h1>{decodeURI(postDocumentPath)}</h1>
-      <Markdown>
+      <Markdown
+        components={{
+          code(props) {
+            const {children, className, node, ...rest} = props
+            const match = /language-(\w+)/.exec(className || '')
+            return match ? (
+              <SyntaxHighlighter
+                PreTag="div"
+                language={match[1]}
+                style={darcula}
+              >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
+            ) : (
+              <code {...rest} className={className}>
+                {children}
+              </code> )
+          }
+        }}
+      >
         {postFileContent}
       </Markdown>
     </article>

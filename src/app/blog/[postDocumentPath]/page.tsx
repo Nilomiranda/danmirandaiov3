@@ -2,8 +2,19 @@ import {loadPost} from "@/app/blog/[postDocumentPath]/actions";
 import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {Metadata} from "next";
 
-export default async function BlogPostPage({ params: { postDocumentPath } }: { params: { postDocumentPath: string } }) {
+type BlogPostPageProps = {
+  params: { postDocumentPath: string }
+}
+
+export async function generateMetadata({ params: {postDocumentPath} }: BlogPostPageProps): Promise<Metadata> {
+  return {
+    title: decodeURI(postDocumentPath)
+  }
+}
+
+export default async function BlogPostPage({ params: { postDocumentPath } }: BlogPostPageProps) {
   const postFileContent = await loadPost(postDocumentPath);
 
   return (

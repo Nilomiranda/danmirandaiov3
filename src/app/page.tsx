@@ -7,10 +7,13 @@ export default async function Home() {
   const hasNoPosts = !Boolean(filteredPosts.length)
 
   return (
-    <main className="h-screen w-full flex flex-col items-center">
-      <h1 className="mb-10">Danilo&apos;s tech blog</h1>
+    <main className="w-full flex flex-col items-center">
+      <div className="mb-10 flex flex-col items-center">
+        <h1>Danilo da Silva</h1>
+        <h2>Building software. Breaking bugs</h2>
+      </div>
 
-      { hasNoPosts && <strong>Nothing to see here</strong>}
+      {hasNoPosts && <strong>Nothing to see here</strong>}
 
       <ul className="flex flex-col items-stretch gap-y-2">
         {

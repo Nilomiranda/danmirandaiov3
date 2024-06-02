@@ -32,7 +32,5 @@ export async function listPosts(): Promise<Post[]> {
 
   const parsedResponse = await response.json();
 
-  console.log({parsedResponse})
-
   return parsedResponse
 }

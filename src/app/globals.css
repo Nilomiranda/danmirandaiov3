@@ -20,3 +20,32 @@ h2 {
 a {
     @apply text-amber-700 underline decoration-1;
 }
+
+article {
+    p, ul, img {
+        margin-bottom: var(--spacing-4);
+    }
+
+    div.code-block {
+        margin: var(--spacing-6) 0 !important;
+    }
+
+    code {
+        background: var(--color-amber-200);
+        color: var(--color-amber-700);
+        padding: var(--spacing-1);
+        border-radius: var(--radius-sm);
+    }
+
+    div.code-block code {
+        background: unset;
+        color: unset;
+        padding: unset;
+        border-radius: unset;
+    }
+
+    ul {
+        list-style-type: circle;
+        padding-left: var(--spacing-4);
+    }
+}

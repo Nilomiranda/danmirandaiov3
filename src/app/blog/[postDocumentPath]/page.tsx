@@ -8,7 +8,7 @@ export default async function BlogPostPage({ params: { postDocumentPath } }: { p
 
   return (
     <article className="flex flex-col w-full max-w-2xl mx-auto">
-      <h1>{decodeURI(postDocumentPath)}</h1>
+      <h1 className="mb-10">{decodeURI(postDocumentPath)}</h1>
       <Markdown
         components={{
           code(props) {
@@ -19,6 +19,7 @@ export default async function BlogPostPage({ params: { postDocumentPath } }: { p
                 PreTag="div"
                 language={match[1]}
                 style={darcula}
+                className="code-block"
               >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
             ) : (
               <code {...rest} className={className}>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {Fragment_Mono, Kode_Mono} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +7,8 @@ import LinkedinIcon from "@/icons/linkedin";
 import TwitterLogo from "@/icons/twitter";
 import GithubLogo from "@/icons/github";
 
-const inter = Inter({ subsets: ["latin"] });
+const fragmentMono = Fragment_Mono({ subsets: ['latin'], weight: "400" })
+const kodeMono = Kode_Mono({ subsets: ['latin'], variable: '--font-kode-mono' })
 
 export const metadata: Metadata = {
   title: "Danilo Tech Garden",
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} h-dvh flex flex-col items-stretch`}>
+      <body className={`${fragmentMono.className} ${kodeMono.variable} h-dvh flex flex-col items-stretch`}>
         <nav className="p-4 w-full flex items-center justify-end gap-x-4">
           <Image src="/danilo.png" alt="Danilo" width={20} height={20} />
 

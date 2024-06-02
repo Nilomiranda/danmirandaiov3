@@ -7,10 +7,12 @@ html, body {
 
 h1 {
     font-size: var(--font-size-4xl);
+    font-family: var(--font-kode-mono);
 }
 
 h2 {
     font-size: var(--font-size-2xl);
+    font-family: var(--font-kode-mono);
 }
 
 a {

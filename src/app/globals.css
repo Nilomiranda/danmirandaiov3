@@ -28,6 +28,7 @@ article {
 
     div.code-block {
         margin: var(--spacing-6) 0 !important;
+        border-radius: var(--radius-md);
     }
 
     code {

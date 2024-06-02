@@ -3,7 +3,12 @@ import Link from "next/link";
 
 export default async function Home() {
   const posts = await listPosts();
-  const filteredPosts = posts.filter(post => post.type !== 'dir');
+  const filteredPosts = posts.filter(post => {
+    const isDirectory = post.type === 'dir';
+    const isMDFileType = post.name.endsWith('.md')
+
+    return !isDirectory && isMDFileType;
+  });
   const hasNoPosts = !Boolean(filteredPosts.length)
 
   return (

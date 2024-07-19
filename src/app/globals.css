@@ -23,7 +23,7 @@ a {
 
 article {
     p, ul, img {
-        margin-bottom: var(--spacing-4);
+        margin-bottom: var(--spacing-8);
     }
 
     div.code-block {

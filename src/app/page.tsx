@@ -1,5 +1,6 @@
 import {listPosts} from "@/app/actions";
 import Link from "next/link";
+import {friendlyUrlsMap} from "@/utils/friendlyUrlsMap";
 
 export default async function Home() {
   const posts = await listPosts();
@@ -8,7 +9,11 @@ export default async function Home() {
     const isMDFileType = post.name.endsWith('.md')
 
     return !isDirectory && isMDFileType;
+  }).map(post => {
+    const { friendlyUrl, title } = friendlyUrlsMap[post.path];
+    return { ...post, friendlyUrl, title }
   });
+  console.log({filteredPosts})
   const hasNoPosts = !Boolean(filteredPosts.length)
 
   return (
@@ -24,7 +29,8 @@ export default async function Home() {
         {
           filteredPosts.map(post => (
             <li key={post.sha}>
-              <Link href={`/blog/${post.path.replace('.md', '')}`}>{post.name.replace('.md', '')}</Link>
+              <Link href={`/blog/${post.friendlyUrl}`}>{post.title}</Link>
+              {/*<Link href={`/blog/${post.path.replace('.md', '')}`}>{post.name.replace('.md', '')}</Link>*/}
             </li>
           ))
         }

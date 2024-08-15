@@ -41,3 +41,5 @@ next-env.d.ts
 /.idea/vcs.xml
 /Github/bruno.json
 /Github/Github repo content.bru
+/.idea/jsLinters/eslint.xml
+/.idea/prettier.xml

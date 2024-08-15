@@ -25,33 +25,36 @@ export default function RootLayout({
     <head>
       <link rel="icon" href="/favicon.ico" sizes="any"/>
     </head>
+
     <body className={`${fragmentMono.className} ${kodeMono.variable} h-dvh flex flex-col items-stretch`}>
-      <nav className="p-4 w-full flex items-center justify-end gap-x-4">
-        <Image src="/danilo.png" alt="Danilo" width={20} height={20}/>
+    <nav className="p-4 w-full flex items-center justify-end gap-x-4 fixed bg-amber-50">
+      <Image src="/danilo.png" alt="Danilo" width={20} height={20}/>
 
-        <ul className="flex items-center gap-x-6">
-          <li><Link href="/">/ home</Link></li>
-          <li><a href="https://danilo.life" target="_blank" rel="noreferrer">/ life</a></li>
-        </ul>
-      </nav>
+      <ul className="flex items-center gap-x-6">
+        <li><Link href="/">/ home</Link></li>
+        <li><a href="https://danilo.life" target="_blank" rel="noreferrer">/ life</a></li>
+      </ul>
+    </nav>
 
+    <div className="mt-20">
       {children}
+    </div>
 
-      <footer className="w-full flex justify-center p-4 mt-auto">
-        <ul className="flex items-center gap-x-2">
-          <li>
-            <a href="https://www.linkedin.com/in/danilo-miranda-b39b06103/" target="_blank"
-               rel="noreferrer"><LinkedinIcon width={25} height={25}/></a>
-          </li>
-          <li>
-            <a href="https://x.com/nilomiranda" target="_blank" rel="noreferrer"><TwitterLogo width={25} height={25}/></a>
-          </li>
-          <li>
-            <a href="https://github.com/nilomiranda" target="_blank" rel="noreferrer"><GithubLogo width={25} height={25}/></a>
-          </li>
-        </ul>
-      </footer>
-      </body>
+    <footer className="w-full flex justify-center p-4 mt-auto">
+      <ul className="flex items-center gap-x-2">
+        <li>
+          <a href="https://www.linkedin.com/in/danilo-miranda-b39b06103/" target="_blank"
+             rel="noreferrer"><LinkedinIcon width={25} height={25}/></a>
+        </li>
+        <li>
+          <a href="https://x.com/nilomiranda" target="_blank" rel="noreferrer"><TwitterLogo width={25} height={25}/></a>
+        </li>
+        <li>
+          <a href="https://github.com/nilomiranda" target="_blank" rel="noreferrer"><GithubLogo width={25} height={25}/></a>
+        </li>
+      </ul>
+    </footer>
+    </body>
     </html>
   );
 }

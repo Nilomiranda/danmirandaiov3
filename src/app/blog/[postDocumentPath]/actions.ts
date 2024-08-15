@@ -29,7 +29,10 @@ export async function loadPost(postDocumentPath: string) {
       const jsonSecondAttempt = parsedSecondAttempt.includes('"status":"404"') && JSON.parse(parsedSecondAttempt)
 
       if (jsonSecondAttempt.status === '404') {
-        throw new Error('POST_NOT_FOUND')
+        return {
+          status: 404,
+          code: 'POST_NOT_FOUND'
+        }
       }
 
       return parsedSecondAttempt;
@@ -41,8 +44,8 @@ export async function loadPost(postDocumentPath: string) {
     console.error('error loading post', err)
 
     return {
-      status: 404,
-      code: 'POST_NOT_FOUND'
+      status: 500,
+      code: 'INTERNAL_SERVER_ERROR'
     }
   }
 }

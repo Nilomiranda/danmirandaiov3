@@ -23,6 +23,10 @@ export const friendlyUrlsMap: Record<string, { friendlyUrl: string, title: strin
     friendlyUrl: 'cookies-a-humbling-auth-experience',
     title: '🍪 Cookies - A humbling auth experience',
   },
+  ['Git stash - A quick guide.md']: {
+    friendlyUrl: 'git-stash-a-quick-essentials-guide',
+    title: 'Git stash: A quick essentials guide',
+  }
 }
 
 export const friendlyUrlToGithubPath: Record<string, string> = {
@@ -32,4 +36,5 @@ export const friendlyUrlToGithubPath: Record<string, string> = {
   ['using-relay-graphql-with-next-js']: 'Using relay-graphql-js with NestJS.md',
   ['ruby-graphql-generating-schema-definition-file']: 'ruby-grahql - generating schema definition file.md',
   ['cookies-a-humbling-auth-experience']: '🍪 Cookies - A humbling auth experience.md',
+  ['git-stash-a-quick-essentials-guide']: 'Git stash - A quick guide.md'
 }

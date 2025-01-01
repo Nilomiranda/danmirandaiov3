@@ -26,6 +26,10 @@ export const friendlyUrlsMap: Record<string, { friendlyUrl: string, title: strin
   ['Git stash - A quick guide.md']: {
     friendlyUrl: 'git-stash-a-quick-essentials-guide',
     title: 'Git stash: A quick essentials guide',
+  },
+  ['Lubuntu limbo - solving the busybox initramfs prompts.md']: {
+    friendlyUrl: 'lubuntu-limbo-exiting-the-busybox',
+    title: 'Lubuntu limbo - Exiting the busybox prompt'
   }
 }
 
@@ -36,5 +40,6 @@ export const friendlyUrlToGithubPath: Record<string, string> = {
   ['using-relay-graphql-with-next-js']: 'Using relay-graphql-js with NestJS.md',
   ['ruby-graphql-generating-schema-definition-file']: 'ruby-grahql - generating schema definition file.md',
   ['cookies-a-humbling-auth-experience']: '🍪 Cookies - A humbling auth experience.md',
-  ['git-stash-a-quick-essentials-guide']: 'Git stash - A quick guide.md'
+  ['git-stash-a-quick-essentials-guide']: 'Git stash - A quick guide.md',
+  ['lubuntu-limbo-exiting-the-busybox']: 'Lubuntu limbo - solving the busybox initramfs prompts.md'
 }
